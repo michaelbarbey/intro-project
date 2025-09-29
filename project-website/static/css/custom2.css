@@ -1,0 +1,917 @@
+@charset "utf-8";
+
+/* PAGES */
+img, video, iframe {
+	max-width: 100%;
+}
+
+/* home */
+.home {
+    color: black;
+}
+
+.row {
+	justify-content: center; /* Ensures alignment in case of flexbox overrides */
+  }
+
+
+/* ai */
+.ai {
+    background-color: rgb(241, 246, 248);
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* astronomy */
+.astronomy {
+    background-color: black;
+    color: white; /* Adjust text color for readability */
+	text-shadow: 1px 1px 1px #000000;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* physics */
+.physics {
+    color:black;
+}
+
+/* about */
+.jarv {
+    background-color: white;
+    color: rgb(61, 60, 60);
+}
+
+/* NAVBARS */
+
+.hidden-navbar {
+    transform: translateY(-100%);
+    transition: transform 0.9s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+.navbar {
+	position: sticky;
+	top:0;
+	z-index: 1020;
+	transition: top 0.7s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar {
+    transform: translateY(0);
+    transition: transform 0.7s ease-in-out, opacity 0.9s ease-in-out;
+}
+
+.navbar-nav {
+	display: flex;
+	justify-content: center;
+	gap: 1rem; /* Adds spacing between links */
+}
+
+.navbar-brand {
+    padding-left: 5rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+/* home */
+.home-navbar .nav-link {
+	color: rgb(123, 120, 120) !important;
+}
+
+.navbar.home-navbar .nav-link:hover {
+	color: black !important;
+}
+
+/* ai */
+.ai-navbar {
+	color: #0A7AFF !important;
+	background-color: rgb(241, 246, 248)!important;
+}
+
+.navbar.ai-navbar .nav-link {
+	color: #0A7AFF !important;
+}
+
+.navbar.ai-navbar .nav-link:hover {
+	color: navy !important;
+}
+
+.ai-navbar .nav-link.active {
+	color: navy !important; /* Active link color for AI page */
+	font-weight: bold; 
+}
+
+/* astronomy */
+.astronomy-navbar .nav-link {
+	color: rgb(183, 182, 182) !important;
+}
+
+.astronomy-navbar .nav-link:hover {
+	color: white !important;
+}
+
+.astronomy-navbar .nav-link.active {
+	color: white !important; /* Active link color for Astronomy page */
+	font-weight: bold;
+}
+
+/* physics */
+.physics-navbar{
+	color: white;
+	background-color: rgb(189, 14, 14) !important;
+}
+
+.navbar.physics-navbar .nav-link:hover {
+	color: white !important;
+}
+
+.physics-navbar .nav-link.active {
+	color: white !important; /* Active link color for Physics page */
+	font-weight: bold;
+}
+/* about */
+
+.jarvbar {
+    color:rgba(255, 255, 255, 0.3);
+    background-color: white !important;
+}
+
+.jarvbar .nav-link:hover {
+	color: black !important;
+}
+
+.jarvbar .nav-link.active {
+	color: black !important; /* Active link color for Astronomy page */
+	font-weight: bold;
+}
+
+/* CAROUSELS */
+
+.carousel {
+    margin-bottom: 1rem;
+}
+
+.custom-carousel {
+	margin: 1rem auto; /* Adds margin around the carousel */
+	max-width: 95%; /* Restricts the width of the carousel */
+	border-radius: 20px; /* Adds rounded corners */
+	overflow: hidden; 
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.custom-carousel img {
+	object-fit: cover; 
+    padding: 3px;
+    border-color: none;
+}
+
+.carousel-item {
+	position: relative;
+	transition: transform 1.5s ease-in-out !important;
+	border-radius: 20px;
+}
+
+.carousel-centered-text {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white; 
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+	z-index: 2; /* Ensure it appears above the image */
+	font-size: 3rem; 
+}
+
+.carousel-inner img {
+	object-fit: cover;
+	height: 40rem;
+	border-radius: 20px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;       
+    height: 10px;       
+    border-radius: 50%; 
+    background-color: rgba(0, 0, 0, 0.2)
+    
+}
+  
+.carousel-indicators .active {
+    background-color: #000; /* Color for the active indicator */
+}
+  
+
+.roundcard {
+	margin: 3rem auto; /* Adds margin around the carousel */
+	max-width: 95%; /* Restricts the width of the carousel */
+	border-radius: 20px; /* Adds rounded corners */
+	overflow: hidden; 
+	box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* BOUNDS */
+.herotext {
+	text-align: center;
+	position: static;
+	margin: 5rem, auto;
+	padding-top: 15rem;
+	color:white;
+	font-size:3rem;
+	color: white; 
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); 
+}
+
+.jumbotron p {
+	color: rgba(250, 250, 250, 0.9);
+	text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); 
+}
+
+.custom-btn {
+	display: inline-block;
+	padding: 0.5rem 1.5rem; /*  oval shape */
+	font-size: 1rem;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	border: 2px solid white; /* White border */
+	border-radius: 50px; 
+	color: white; 
+	background-color: transparent; /* Clear background */
+	text-decoration: none; /* Removes underline */
+	transition: 0.3s ease, color 0.3s ease; 
+}
+
+.return-btn {
+	display: inline-block;
+	padding: 0.5rem 1.5rem; 
+	font-size: 1rem;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	border: 2px solid black; /* Black border */
+	border-radius: 50px; 
+	color: white; 
+	background-color: black; 
+	text-decoration: none; /* Removes underline */
+	transition: 0.3s ease, color 0.3s ease; 
+}
+
+.return-btn:hover {
+	background-color: white; /* Background becomes white on hover */
+	color: black; /* Text color changes to black on hover */
+	font-weight: normal; 
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1); 
+    border-color:black;
+}
+
+.custom-btn:hover {
+	background-color: white; 
+	color: black; 
+	font-weight: normal;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+/* home */
+.homeupperbound {
+	background-image:url("../assets/img/fellowship_program3.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: relative;
+    height:40rem;
+	color: white; 
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.homelowerbound {
+	background-image: url("../assets/img/roundcard.png.webp");
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-position: center center;
+	height:40rem;
+	z-index: -100;
+	color: white; 
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+/* ai */
+.aiupperbound{
+	background-image:url("../assets/img/developers-2.gif.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height:40rem;
+	color: white; 
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.ailowerbound{
+	background-image: url("../assets/img/minecraft.jpg.webp");
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-position: center center;
+	height:40rem;
+	z-index: -100;
+	color: white; 
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* astronomy */
+.astronomyupperbound {
+	background-image:url("../assets/img/moon2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height:40rem;
+}
+
+.astronomylowerbound {
+	background-image: url("../assets/img/aeronautics3.webp");
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-position: center center;
+	height:40rem;
+	z-index: -100;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* physics */
+.physicsupperbound{
+	background-image:url("../assets/img/los-alamos-library.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height:40rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.physicslowerbound {
+	background-image: url("../assets/img/quatum-error-correction.jpg");
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-position: center center;
+	height:40rem;
+	z-index: -100;
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* about */
+
+.startbound {
+	background-image:url("../assets/img/o1-systems_card_v2__1_.png.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:40rem;
+	color: white; 
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.jarvupperbound {
+	background-image:url("../assets/img/next_card4.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:40rem;
+	color: white; 
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.jarvlowerbound {
+    background-image: url("../assets/img/our-mission.webp");
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-position: center center;
+	height:40rem;
+	z-index: -100;
+	color: white;  
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1);  
+}
+
+#jarvtext {
+    text-align: center;
+	position: static;
+	margin-top: 3rem;
+    margin-bottom:3rem;
+    padding-left:20%;
+    padding-right:20%;
+	color:white;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+}
+
+#jarvhead {
+    text-align: center;
+	position: static;
+	margin: 5rem, auto;
+	padding-top: 11rem;
+	color:white;
+	font-size:3rem;
+	color: white;  
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);  
+
+}
+
+/* CUSTOM CARDS */
+.card {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.card-body {
+	padding-top: 1px;
+	border-radius: 20px; /* Ensures the overlay fits the card's rounded corners */
+    flex-grow:1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card-img {
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.card-text {
+    text-align: left;
+    color: white;
+    font-style: bold;
+    font-size: small;
+    margin-bottom: 1px;
+    text-shadow: 3px 3px 3px #000000
+}
+
+.cardslowerbound{
+	text-align:left;
+	margin-bottom:2rem;
+}
+
+.p-cards {
+	background-color: black;
+	color:rgba(255, 255, 255, 0.9);
+	border-radius: 20px;
+	box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+	padding-top:1rem;
+	width: 308px;
+	height: 410px !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	margin: auto;
+}
+
+/* home */
+
+/* ai */
+.ai-customcard {
+	background-image: url("../assets/img/aii-internship.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+	min-height: 250px;
+	text-align: left;
+	color:white !important;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+.ai-customcard2 {
+	background-image: url("../assets/img/ai-card2.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+	min-height: 250px;
+	text-align: left;
+	color:white !important;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+.ai-customcard3 {
+	background-image: url("../assets/img/ai-card4.jpg");
+	background-size: cover;
+	background-position: relative;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+	min-height: 250px;
+	text-align: left;
+	color:white !important;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+.ai-cardtext {
+	text-align: left;
+	color: white;
+	font-style: bold;
+	font-size: small;
+	margin-bottom: 1px;
+	text-shadow: 3px 3px 3px #000000
+}
+/* astronomy */
+.astro-customcard{
+	background-image: url("../assets/img/fellowship3.webp");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color:white;
+	border-radius:20px;
+	overflow:hidden;
+	min-height: 250px;
+	border-color: none;
+	text-shadow: 1px 1px 1px #000000;
+	text-align: left;
+}
+
+.astro-customcard2{
+	background-image: url("../assets/img/lunar-trailblazer-design-model.jpg.webp");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color:white;
+	border-radius:20px;
+	overflow:hidden;
+	min-height: 250px;
+	border-color: none;
+	text-shadow: 1px 1px 1px #000000;
+	text-align: left;
+}
+
+.astro-customcard3{
+	background-image: url("../assets/img/Dec24_Jupiter_Map.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color:white;
+	border-radius:20px;
+	overflow:hidden;
+	min-height: 250px;
+	border-color: none;
+	text-shadow: 1px 1px 1px #000000;
+	text-align: left;
+}
+
+/* physics */
+.phisics-customcard {
+	background-image: url("../assets/img/physicist-ai-chip.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+	min-height: 250px;
+	text-align: left;
+	color:white !important;
+	text-shadow: 1.5px 1.5px 1.5px #000000 !important;
+}
+
+.phisics-customcard2 {
+	background-image: url("../assets/img/physics_particle-accelerator.jpg");
+	background-size: cover;
+	background-position: top right;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+	min-height: 250px;
+	text-align: left;
+	color:white !important;
+	text-shadow: 3px 3px 3px #000000 !important;
+}
+
+.phisics-customcard3 {
+	background-image: url("../assets/img/quantum_turtle.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+	min-height: 250px;
+	text-align: left;
+	color:white !important;
+	text-shadow: 3px 3px 3px #000000 !important;
+}
+
+/* about */
+
+.card-pad {
+    padding:0.5rem;
+    margin-bottom: 3rem;
+}
+
+.jarv-customcard {
+    background-image: url("../assets/img/blue_spidercraawler.png") !important;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 2px 1.5px 2px #000000;
+}
+
+.jarv-customcard2 {
+    background-image: url("../assets/img/web_development-3.webp") !important;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 1.5px 1.5px 1.5px #000000;
+}
+
+.jarv-customcard3 {
+    background-image: url("../assets/img/bee-project.jpg") !important;
+	background-size: cover;
+	background-position: relative;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 1.5px 1.5px 1.5px #000000;
+}
+
+.jarv-customcard4 {
+    background-image: url("../assets/img/plasterer-bee-Colletes-daviesanus.jpg") !important;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 1.5px 1.5px 1.5px #000000;
+}
+
+.jarv-customcard5 {
+    background-image: url("../assets/img/card_img_5.jpg.webp") !important;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 1.5px 1.5px 1.5px #000000;;
+}
+
+.jarv-customcard6 {
+    background-image: url("../assets/img/card_img_6.png.webp") !important;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 1.5px 1.5px 1.5px #000000;
+}
+
+.jarv-customcard7 {
+    background-image: url("../assets/img/card_img_7.webp") !important;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 1.5px 1.5px 1.5px #000000;
+}
+
+.jarv-customcard8 {
+    background-image: url("../assets/img/card_img_8.png.webp") !important;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 1.5px 1.5px 1.5px #000000;
+}
+
+.jarv-customcard9 {
+    background-image: url("../assets/img/card_img_9.webp") !important;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 1.5px 1.5px 1.5px #000000;
+}
+
+.jarv-customcard10 {
+    background-image: url("../assets/img/card_img_10.png.webp") !important;
+	background-size: cover;
+	background-position: right center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 1.5px 1.5px 1.5px #000000;
+}
+
+.jarv-customcard11 {
+    background-image: url("../assets/img/card_img_11.png.webp") !important;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 1.5px 1.5px 1.5px #000000;
+}
+
+.jarv-customcard12 {
+    background-image: url("../assets/img/card_img_12.jpg.webp") !important;
+	background-size: cover;
+	background-position: left center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+    min-height: 250px;
+    text-align: left;
+    color: white !important;
+    text-shadow: 1.5px 1.5px 1.5px #000000;
+}
+/* FORM */
+
+.thanks-customcard {
+	background-image: url("../assets/img/about-us-2.webp");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius:20px;
+	border-color: rgb(241, 246, 248)!important;
+	overflow:hidden;
+	min-height: 250px;
+	text-align: left;
+	color:white !important;
+	height:40rem;
+	z-index: -100;
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1);  
+}
+
+/* Styles for img and body */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .form-signin {
+        max-width: 530px;
+        padding: 15px;
+  }
+  
+  .cover-container {
+    max-width: 42em;
+  }
+  
+  .thanks {
+    background-image: url("images/bird.jpg");
+    min-height: 900px;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* Styles for forms */
+  
+  input#firstName:focus:invalid, 
+  input#lastName:focus:invalid, 
+  input#username:focus:invalid, 
+  input#email:focus:invalid {
+    background:#ffe8e8 url("../assets/img/red-check.svg") right/contain no-repeat;
+    border-color: red;
+    border-radius: 5px;
+    border-width: 1px;
+    font-weight: bolder;
+  }
+  
+  input#firstName:focus:valid, 
+  input#lastName:focus:valid, 
+  input#username:focus:valid, 
+  input#email:focus:valid {
+    background:#ffffff url("../assets/img/green-check.svg") right/contain no-repeat;
+  }
+
+
+/* FOOTER */
+.footer-list {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
+	list-style-type: none;
+	padding: 0;
+}
+
+.footer-list li {
+	margin-bottom: 0.5rem;
+}
+
+.footer-list li a{
+	text-decoration: none;
+	color:inherit;
+}
+.footer-list li a:hover {
+	text-decoration: underline;
+}
+
+.footer .row {
+	gap: 0;  
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-brand {
+        display:block;
+        text-align: center;
+    }
+    .navbar-brand img{
+        margin-right:2rem;
+    }
+
+    .navbar-toggler {  
+        z-index:1050;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0; 
+    }
+
+    .navbar-collapse {
+        margin: 0; /* removing bootstrap margin */
+    }
+
+    #jarvtext {
+        margin-top: 1.5rem;
+        padding-right:10%;
+        padding-left:10%;
+        margin-bottom: 1rem;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+    }
+
+    #jarvhead {
+        position: relative;
+        margin: 0;
+        padding-top: 7rem;
+        color:white;
+        font-size:3rem;
+        color: white;  
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);  
+    }
+
+    
+}
